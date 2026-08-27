@@ -28,7 +28,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_make_world_pressed() -> void:
-	get_tree().change_scene_to_file("res://procedural_generation_template/pmg.tscn")#its recommened to use the UID 
+	get_tree().change_scene_to_file("res://pmg.tscn")#its recommened to use the UID 
 
 
 func _on_continue_pressed() -> void:
