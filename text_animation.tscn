@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cc6hnr8ljddue"]
+
+[ext_resource type="Script" uid="uid://dp13lmcnxylcq" path="res://text_animation.gd" id="1_b10dv"]
+
+[node name="text animation" type="Node" unique_id=782812149]
+script = ExtResource("1_b10dv")

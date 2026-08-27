@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bpev0urws8wtq"]
+
+[ext_resource type="Script" uid="uid://nbm61uno6dry" path="res://procedural_generation_template/pmg.gd" id="1_cvnwp"]
+[ext_resource type="Texture2D" uid="uid://diwx4n3tsoxv1" path="res://tiles/New Piskel (5).png" id="2_eltgs"]
+
+[sub_resource type="Gradient" id="Gradient_57qmd"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yf5fn"]
+noise_type = 0
+frequency = 0.0021
+fractal_octaves = 10
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_g4v7s"]
+noise = SubResource("FastNoiseLite_yf5fn")
+color_ramp = SubResource("Gradient_57qmd")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fcnqv"]
+noise_type = 0
+frequency = 0.0021
+fractal_octaves = 10
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_d0u6y"]
+noise = SubResource("FastNoiseLite_fcnqv")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_7numd"]
+noise_type = 0
+frequency = 0.0021
+fractal_octaves = 10
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3gngh"]
+noise = SubResource("FastNoiseLite_7numd")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mv3bp"]
+texture = ExtResource("2_eltgs")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_eltgs"]
+sources/0 = SubResource("TileSetAtlasSource_mv3bp")
+
+[node name="pmg" type="Node2D" unique_id=861026755]
+script = ExtResource("1_cvnwp")
+temp_noise_text = SubResource("NoiseTexture2D_g4v7s")
+elevation_noise_text = SubResource("NoiseTexture2D_d0u6y")
+height_noise_text = SubResource("NoiseTexture2D_3gngh")
+
+[node name="layer_0" type="TileMapLayer" parent="." unique_id=764745762]
+tile_set = SubResource("TileSet_eltgs")

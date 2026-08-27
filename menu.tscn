@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://b0j1ksflbn6p6"]
+
+[ext_resource type="Script" uid="uid://bi4n5xa82np5r" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://dg6sokpr4mxvx" path="res://Button_Animation.gd" id="2_ouk20"]
+[ext_resource type="Script" uid="uid://dp13lmcnxylcq" path="res://text_animation.gd" id="3_mae5d"]
+
+[node name="menu" type="Control" unique_id=1849517879]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=462470916]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 257.0
+offset_right = 606.0
+offset_bottom = 393.0
+
+[node name="make world" type="Button" parent="VBoxContainer" unique_id=786016307]
+layout_mode = 2
+text = "make world"
+
+[node name="Button_Animation" type="Node" parent="VBoxContainer/make world" unique_id=637705815]
+script = ExtResource("2_ouk20")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.3
+transition_type = 3
+metadata/_custom_type_script = "uid://dg6sokpr4mxvx"
+
+[node name="continue" type="Button" parent="VBoxContainer" unique_id=1910377815]
+layout_mode = 2
+text = "continue"
+
+[node name="Button_Animation" type="Node" parent="VBoxContainer/continue" unique_id=888780502]
+script = ExtResource("2_ouk20")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.3
+transition_type = 3
+metadata/_custom_type_script = "uid://dg6sokpr4mxvx"
+
+[node name="force reset seed" type="Button" parent="VBoxContainer" unique_id=1628953142]
+layout_mode = 2
+text = "force reset seed"
+
+[node name="Button_Animation" type="Node" parent="VBoxContainer/force reset seed" unique_id=87770733]
+script = ExtResource("2_ouk20")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.3
+transition_type = 3
+metadata/_custom_type_script = "uid://dg6sokpr4mxvx"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1600363020]
+layout_mode = 2
+text = "quit"
+
+[node name="Button_Animation" type="Node" parent="VBoxContainer/quit" unique_id=294898737]
+script = ExtResource("2_ouk20")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.3
+transition_type = 3
+metadata/_custom_type_script = "uid://dg6sokpr4mxvx"
+
+[node name="Label" type="Label" parent="." unique_id=57942577]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 203.0
+offset_right = 695.0
+offset_bottom = 226.0
+text = "Procedural map generation templette"
+
+[node name="note" type="Button" parent="." unique_id=823174644]
+layout_mode = 0
+offset_left = 1091.0
+offset_top = 606.0
+offset_right = 1143.0
+offset_bottom = 637.0
+text = "notes
+"
+
+[node name="Button_Animation" type="Node" parent="note" unique_id=746149498]
+script = ExtResource("2_ouk20")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.3
+transition_type = 3
+metadata/_custom_type_script = "uid://dg6sokpr4mxvx"
+
+[node name="Panel" type="Panel" parent="." unique_id=689299278]
+visible = false
+layout_mode = 0
+offset_left = 329.0
+offset_top = 170.0
+offset_right = 759.0
+offset_bottom = 442.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=304598730]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 120.0
+offset_right = 259.0
+offset_bottom = 157.0
+theme_override_constants/separation = 31
+
+[node name="N_reset" type="Button" parent="Panel/HBoxContainer" unique_id=494846936]
+layout_mode = 2
+text = "NO"
+
+[node name="Button_Animation2" type="Node" parent="Panel/HBoxContainer/N_reset" unique_id=1982488020]
+script = ExtResource("2_ouk20")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.3
+transition_type = 3
+metadata/_custom_type_script = "uid://dg6sokpr4mxvx"
+
+[node name="Y_reset" type="Button" parent="Panel/HBoxContainer" unique_id=508762428]
+layout_mode = 2
+text = "Yes"
+
+[node name="Button_Animation3" type="Node" parent="Panel/HBoxContainer/Y_reset" unique_id=1188262057]
+script = ExtResource("2_ouk20")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.3
+transition_type = 3
+metadata/_custom_type_script = "uid://dg6sokpr4mxvx"
+
+[node name="Reset_label" type="Label" parent="Panel" unique_id=1851669783]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 60.0
+offset_right = 399.0
+offset_bottom = 116.0
+text = "Do you want to forcefully reset you seed data 
+in your save file?"
+
+[node name="text_animation" type="Node" parent="Panel/Reset_label" unique_id=1966697985 node_paths=PackedStringArray("node_1")]
+script = ExtResource("3_mae5d")
+node_1 = NodePath("..")
+metadata/_custom_type_script = "uid://dp13lmcnxylcq"
+
+[node name="warning panel" type="Panel" parent="." unique_id=1366650942]
+visible = false
+layout_mode = 0
+offset_left = 329.0
+offset_top = 170.0
+offset_right = 759.0
+offset_bottom = 442.0
+
+[node name="warning lable" type="Label" parent="warning panel" unique_id=2075084853]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 41.0
+offset_right = 410.0
+offset_bottom = 142.0
+text = "Save file was flagged as corrupted,missing, or 
+tampered with. You won't be able to continue since 
+data can't be retrieved and will have to force reset 
+file losing all data stored."
+
+[node name="text_animation" type="Node" parent="warning panel/warning lable" unique_id=367984534 node_paths=PackedStringArray("node_1")]
+script = ExtResource("3_mae5d")
+node_1 = NodePath("..")
+metadata/_custom_type_script = "uid://dp13lmcnxylcq"
+
+[node name="Label" type="Label" parent="warning panel" unique_id=1010085581]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 11.0
+offset_right = 251.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 0.06666667, 0.12941177, 1)
+text = "!!WARNING!!"
+
+[node name="Button" type="Button" parent="warning panel" unique_id=717185100]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 179.0
+offset_right = 225.0
+offset_bottom = 210.0
+text = "OK"
+
+[node name="Button_Animation" type="Node" parent="warning panel/Button" unique_id=1794169723]
+script = ExtResource("2_ouk20")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.3
+transition_type = 3
+metadata/_custom_type_script = "uid://dg6sokpr4mxvx"
+
+[connection signal="pressed" from="VBoxContainer/make world" to="." method="_on_make_world_pressed"]
+[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/force reset seed" to="." method="_on_force_reset_seed_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/N_reset" to="." method="_on_n_reset_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Y_reset" to="." method="_on_y_reset_pressed"]
+[connection signal="pressed" from="warning panel/Button" to="." method="_on_button_pressed"]
