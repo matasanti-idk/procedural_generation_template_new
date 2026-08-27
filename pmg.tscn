@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpev0urws8wtq"]
 
-[ext_resource type="Script" uid="uid://nbm61uno6dry" path="res://procedural_generation_template/pmg.gd" id="1_cvnwp"]
+[ext_resource type="Script" uid="uid://nbm61uno6dry" path="res://pmg.gd" id="1_cvnwp"]
+[ext_resource type="Script" uid="uid://b4p3451j0wxp3" path="res://camera_2d.gd" id="2_deafw"]
 [ext_resource type="Texture2D" uid="uid://diwx4n3tsoxv1" path="res://tiles/New Piskel (5).png" id="2_eltgs"]
 
 [sub_resource type="Gradient" id="Gradient_57qmd"]
@@ -44,6 +45,10 @@ script = ExtResource("1_cvnwp")
 temp_noise_text = SubResource("NoiseTexture2D_g4v7s")
 elevation_noise_text = SubResource("NoiseTexture2D_d0u6y")
 height_noise_text = SubResource("NoiseTexture2D_3gngh")
+
+[node name="Cam_Movement" type="Camera2D" parent="." unique_id=565321820]
+script = ExtResource("2_deafw")
+metadata/_custom_type_script = "uid://b4p3451j0wxp3"
 
 [node name="layer_0" type="TileMapLayer" parent="." unique_id=764745762]
 tile_set = SubResource("TileSet_eltgs")
