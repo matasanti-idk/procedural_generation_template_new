@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dlkipvy41tc6s"]
+
+[ext_resource type="Script" uid="uid://buy3ygg1rdc3s" path="res://chunk_system_test.gd" id="1_dkgr1"]
+[ext_resource type="Script" uid="uid://b4p3451j0wxp3" path="res://camera_2d.gd" id="1_mvoy1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkgr1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(320, 320)
+
+[node name="chunk_system test" type="Node2D" unique_id=929708399]
+script = ExtResource("1_dkgr1")
+
+[node name="Cam_Movement" type="Camera2D" parent="." unique_id=340227137]
+script = ExtResource("1_mvoy1")
+metadata/_custom_type_script = "uid://b4p3451j0wxp3"
+
+[node name="Area2D2" type="Area2D" parent="Cam_Movement" unique_id=1091646128]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/Area2D2" unique_id=722050890]
+shape = SubResource("RectangleShape2D_dkgr1")
+debug_color = Color(0.643066, 0.44735438, 0.7182203, 0.41960785)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=978949142]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=252162809]
+shape = SubResource("RectangleShape2D_g4v7s")
